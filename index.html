@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Mapping Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .instructions {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border-left: 4px solid #1e90ff;
+            text-align: left;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Face Image Map</h1>
+        
+        <div class="instructions">
+            <p><strong>Click on different parts of the face:</strong></p>
+            <ul>
+                <li>Click on the <strong>right eye</strong> to view personal information</li>
+                <li>Click on the <strong>left eye</strong> to view educational background</li>
+            </ul>
+        </div>
+        
+        <!-- Image with map -->
+        <img src="images/face.png" alt="Face Image" usemap="#face-map">
+        
+        <!-- Image map definition -->
+        <map name="face-map">
+            <!-- Right eye (viewer's left) - personal info -->
+            <area shape="circle" coords="150,120,25" href="education.html" alt="Personal Information">
+            
+            <!-- Left eye (viewer's right) - education -->
+            <area shape="circle" coords="100,120,25" href="personal_info.html" alt="Educational Background">
+        </map>
+        
+        
+    </div>
+
+    <script>
+        // You can add JavaScript to highlight the clickable areas if desired
+        document.addEventListener('DOMContentLoaded', function() {
+            // This is just a placeholder for potential JavaScript enhancements
+            console.log("Image map loaded successfully");
+        });
+    </script>
+</body>
+</html>
